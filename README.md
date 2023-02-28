@@ -3,4 +3,5 @@
 
 Parts 
 [x] - Lexer: Convert program source code into tokens that represent important information such as alphabets or keywords: false, return, true, etc
+
 [] - Parser: Convert tokens into an abstract syntax tree or AST
