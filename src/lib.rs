@@ -18,6 +18,12 @@ pub enum Token {
   EOF,
 }
 
+extern crate nom;
+
+mod parser;
+
+pub use self::parser::{math_expression, Node};
+
 // lex function should iterate over every byte of the input string, 
 // and categorize each one according to the token descriptions above.
 pub fn lex(input: &str) -> Vec<Token> {
