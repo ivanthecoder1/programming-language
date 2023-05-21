@@ -1,4 +1,10 @@
 program                 = function_definition+ ;
+if_expressions = if_branch, [else_if_branch], else_branch;
+if_branch = "if", boolean, "{", function_return , ";", "}"; 
+else_branch = "else", "{", function_return , ";", "}";
+else_if_branch = "else if", boolean, "{", function_return , ";", "}";
+comparison_expression = number | boolean | identifier | math_expression, comparison_operators, number | boolean | identifier | math_expression;
+comparison_operators = ">" | "<" | ">=" | "<=" | "==" | "!=" ;
 function_definition     = "fn" , identifier , "(" , [arguments] , ")" , "{" , [statement+] , "}" ;
 arguments               = expression , { "," , expression } ;
 statement               = variable_define , ";" | function_return , ";" ;
